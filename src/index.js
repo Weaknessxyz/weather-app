@@ -3,6 +3,7 @@ import './styles.css';
 /* eslint-disable no-use-before-define */
 const form = document.querySelector('form');
 const input = document.querySelector('input');
+const errorMessage = document.querySelector('.form__error-message');
 const weatherContainer = document.querySelector('.weather__container');
 form.addEventListener('submit', handleSubmission);
 
@@ -48,8 +49,9 @@ function handleSubmission(e) {
   const weatherData = fetchWeatherData(input.value);
   weatherData.then((data) => {
     if (data instanceof Error) {
-      console.log('error');
+      errorMessage.classList.remove('hidden');
     } else {
+      errorMessage.classList.add('hidden');
       processWeatherData(weatherData).then((weather) => {
         displayWeatherData(weather);
       });

@@ -75,6 +75,7 @@ input {
   background: none;
   border: none;
   outline: none;
+  width: 100%;
 }
 
 button {
@@ -91,7 +92,7 @@ button {
 }
 
 .red {
-  color: red;
+  color: rgb(214, 133, 133);
 }
 
 .hidden {
