@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: x-large;
+  color: white;
+}
+
+html, body {
+  background: url(./assets/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+.page__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__container {
+  width: fit-content;
+}
+
+.weather__container {
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
+}
+
+.weather__general, .weather__specifics {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.weather__general {
+  padding-right: 50px;
+  border-right: solid white 5px;
+}
+
+.weather__specifics > span {
+  font-size: 80%;
+  padding-top: 20%;
+  padding-left: 50px
+}
+
+.weather__location {
+  font-size: 200%;
+}
+
+.weather__temperature {
+  font-size: 500%;
+}
+
+.form__container {
+  background-color: rgba(141, 141, 141, 0.1);
+  margin-top: 20px;
+  padding: 7px;
+  padding-right: 50px;
+  position: relative;
+}
+
+.weather__numbers {
+  display: flex;
+}
+
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  position: absolute;
+  border: none;
+  background: none;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.magnifying-glass {
+  filter: invert(100%);
+}
+
+.red {
+  color: red;
+}
+
+.hidden {
+  opacity: 0;
+  cursor: default;
+}
